@@ -1,0 +1,401 @@
+{
+  "id": "c32fc51f-0817-417d-aea2-e831f381069a",
+  "version": "2.0",
+  "name": "UI-автотесты",
+  "url": "https://testsheepnz.github.io/random-number.html",
+  "tests": [{
+    "id": "b0548f8d-cbcb-4c2d-970e-7625e90af0d7",
+    "name": "Testcase 2",
+    "commands": [{
+      "id": "51845b28-12f7-4987-8a60-9e764c472c39",
+      "comment": "Переход на сайт",
+      "command": "open",
+      "target": "https://testsheepnz.github.io/BasicCalculator.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf13df62-eaa1-457d-a55f-fa6bd16a5b3a",
+      "comment": "Выбрать сборку Build",
+      "command": "click",
+      "target": "id=selectBuild",
+      "targets": [
+        ["id=selectBuild", "id"],
+        ["name=selectBuild", "name"],
+        ["css=#selectBuild", "css:finder"],
+        ["xpath=//select[@id='selectBuild']", "xpath:attributes"],
+        ["xpath=//section[@id='main-body']/div/div/div/div/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f303ba2-7f7d-46f8-a9c9-bd691c83f812",
+      "comment": "Кликнуть по первому полю",
+      "command": "click",
+      "target": "id=number1Field",
+      "targets": [
+        ["id=number1Field", "id"],
+        ["name=number1", "name"],
+        ["css=#number1Field", "css:finder"],
+        ["xpath=//input[@id='number1Field']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a5c51e8-b460-44de-8810-234ad7b7757d",
+      "comment": "Ввести значение gs",
+      "command": "type",
+      "target": "id=number1Field",
+      "targets": [
+        ["id=number1Field", "id"],
+        ["name=number1", "name"],
+        ["css=#number1Field", "css:finder"],
+        ["xpath=//input[@id='number1Field']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "gs"
+    }, {
+      "id": "18af9762-62fb-469b-9b25-e63d44f881c8",
+      "comment": "Кликнуть по второму полю",
+      "command": "click",
+      "target": "id=number2Field",
+      "targets": [
+        ["id=number2Field", "id"],
+        ["name=number2", "name"],
+        ["css=#number2Field", "css:finder"],
+        ["xpath=//input[@id='number2Field']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "719c6372-5f94-487d-afe0-5d6ce32f0a53",
+      "comment": "Ввести значение bu",
+      "command": "type",
+      "target": "id=number2Field",
+      "targets": [
+        ["id=number2Field", "id"],
+        ["name=number2", "name"],
+        ["css=#number2Field", "css:finder"],
+        ["xpath=//input[@id='number2Field']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "bu"
+    }, {
+      "id": "c766d7d2-c35a-496d-b891-9095410d812b",
+      "comment": "Выбрать операцию",
+      "command": "click",
+      "target": "id=selectOperationDropdown",
+      "targets": [
+        ["id=selectOperationDropdown", "id"],
+        ["name=selectOperation", "name"],
+        ["css=#selectOperationDropdown", "css:finder"],
+        ["xpath=//select[@id='selectOperationDropdown']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div[3]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "105a90fb-061b-48dc-b711-2f377e888a72",
+      "comment": "Выбрать операцию Concatenate",
+      "command": "select",
+      "target": "id=selectOperationDropdown",
+      "targets": [],
+      "value": "label=Concatenate"
+    }, {
+      "id": "b4ef583f-c07f-4965-b166-517b1898fd3f",
+      "comment": "Нажать на кнопку Calculate",
+      "command": "click",
+      "target": "id=calculateButton",
+      "targets": [
+        ["id=calculateButton", "id"],
+        ["css=#calculateButton", "css:finder"],
+        ["xpath=//input[@id='calculateButton']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d37bb6e4-ccf5-4069-8072-81e22c392fba",
+      "comment": "Проверяем результат, с ожидаемым",
+      "command": "assertElementPresent",
+      "target": "id=numberAnswerField",
+      "targets": [
+        ["id=numberAnswerField", "id"],
+        ["name=numberAnswer", "name"],
+        ["css=#numberAnswerField", "css:finder"],
+        ["xpath=//input[@id='numberAnswerField']", "xpath:attributes"],
+        ["xpath=//form[@id='answerForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form[4]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "gsbu"
+    }, {
+      "id": "3a4081d2-411b-468a-bdc7-02addb9d6bda",
+      "comment": "Закрыть браузер",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b55d3610-2c83-4417-a2b3-b3e02daed5fc",
+    "name": "Testcase 1",
+    "commands": [{
+      "id": "e62903b7-2999-4013-aca9-85754be7728e",
+      "comment": "Открыть сайт",
+      "command": "open",
+      "target": "https://testsheepnz.github.io/BasicCalculator.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "532f0b7c-c30a-4bca-ac95-4ea262721538",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x984",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38e217ae-6cb8-4a5e-8d92-3dd3f4c68901",
+      "comment": "Выбрать сборку Prototype",
+      "command": "click",
+      "target": "id=selectBuild",
+      "targets": [
+        ["id=selectBuild", "id"],
+        ["name=selectBuild", "name"],
+        ["css=#selectBuild", "css:finder"],
+        ["xpath=//select[@id='selectBuild']", "xpath:attributes"],
+        ["xpath=//section[@id='main-body']/div/div/div/div/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbd5bcb1-7476-44c3-891c-e5c3199c7520",
+      "comment": "Выбрать поле 1",
+      "command": "click",
+      "target": "id=number1Field",
+      "targets": [
+        ["id=number1Field", "id"],
+        ["name=number1", "name"],
+        ["css=#number1Field", "css:finder"],
+        ["xpath=//input[@id='number1Field']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c6213f1-ae4d-4d06-80d5-85e9f85a96fe",
+      "comment": "Ввести значение \"2\"",
+      "command": "type",
+      "target": "id=number1Field",
+      "targets": [
+        ["id=number1Field", "id"],
+        ["name=number1", "name"],
+        ["css=#number1Field", "css:finder"],
+        ["xpath=//input[@id='number1Field']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "6893de66-1c03-4bae-ab32-ab57c3bd114a",
+      "comment": "Выбрать поле 2",
+      "command": "click",
+      "target": "id=number2Field",
+      "targets": [
+        ["id=number2Field", "id"],
+        ["name=number2", "name"],
+        ["css=#number2Field", "css:finder"],
+        ["xpath=//input[@id='number2Field']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6d5eade-883c-49b5-b967-1107ae6177d2",
+      "comment": "Ввести значение \"3\"",
+      "command": "type",
+      "target": "id=number2Field",
+      "targets": [
+        ["id=number2Field", "id"],
+        ["name=number2", "name"],
+        ["css=#number2Field", "css:finder"],
+        ["xpath=//input[@id='number2Field']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "f045471e-55d9-4b4f-97ba-0735bab55b78",
+      "comment": "Выбрать операцию",
+      "command": "click",
+      "target": "id=selectOperationDropdown",
+      "targets": [
+        ["id=selectOperationDropdown", "id"],
+        ["name=selectOperation", "name"],
+        ["css=#selectOperationDropdown", "css:finder"],
+        ["xpath=//select[@id='selectOperationDropdown']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div[3]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a987296-e52c-4faa-ad2d-0a505a3588e4",
+      "comment": "Задать операцию Subtract",
+      "command": "select",
+      "target": "id=selectOperationDropdown",
+      "targets": [],
+      "value": "label=Subtract"
+    }, {
+      "id": "b161bb9d-e1c0-4f6f-b395-37cfc5cf4a97",
+      "comment": "Нажать на кнопку Calculate",
+      "command": "click",
+      "target": "id=calculateButton",
+      "targets": [
+        ["id=calculateButton", "id"],
+        ["css=#calculateButton", "css:finder"],
+        ["xpath=//input[@id='calculateButton']", "xpath:attributes"],
+        ["xpath=//form[@id='calcForm']/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a2fc8e0-6a24-4094-9a46-f5e2102fae0b",
+      "comment": "Проверяем результат, с ожидаемым",
+      "command": "assertElementPresent",
+      "target": "id=numberAnswerField",
+      "targets": [
+        ["id=numberAnswerField", "id"],
+        ["name=numberAnswer", "name"],
+        ["css=#numberAnswerField", "css:finder"],
+        ["xpath=//input[@id='numberAnswerField']", "xpath:attributes"],
+        ["xpath=//form[@id='answerForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form[4]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "-1"
+    }, {
+      "id": "6ab7de61-7b70-4366-a7b1-e72fe196b0fe",
+      "comment": "Закрыть браузер",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "56178655-631f-4b57-b61b-f703d1ef7a97",
+    "name": "Testcase 3",
+    "commands": [{
+      "id": "8a46fe0d-4ff1-45c9-882e-603d5de5eb2d",
+      "comment": "Открыть сайт",
+      "command": "open",
+      "target": "https://testsheepnz.github.io/random-number.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e9a7d04-4d11-48b1-b601-6d6a02ab9b57",
+      "comment": "Выбрать сборку",
+      "command": "click",
+      "target": "id=buildNumber",
+      "targets": [
+        ["id=buildNumber", "id"],
+        ["name=buildNumber", "name"],
+        ["css=#buildNumber", "css:finder"],
+        ["xpath=//select[@id='buildNumber']", "xpath:attributes"],
+        ["xpath=//form[@id='setGameForm']/div/div[3]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63212643-e48e-4db7-8ed8-9eb6223234ea",
+      "comment": "Выбрать сборку Demo",
+      "command": "select",
+      "target": "id=buildNumber",
+      "targets": [],
+      "value": "label=Demo"
+    }, {
+      "id": "46c9a298-80a4-438f-9d75-fa77d6bc0f34",
+      "comment": "Нажать на кнопку Roll the dice",
+      "command": "click",
+      "target": "id=rollDiceButton",
+      "targets": [
+        ["id=rollDiceButton", "id"],
+        ["css=#rollDiceButton", "css:finder"],
+        ["xpath=//input[@id='rollDiceButton']", "xpath:attributes"],
+        ["xpath=//form[@id='rollDiceForm']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccb9d478-d249-47bb-a4a4-06435243b26d",
+      "comment": "Выбрать поле для ввода",
+      "command": "click",
+      "target": "id=numberGuess",
+      "targets": [
+        ["id=numberGuess", "id"],
+        ["name=numberGuess", "name"],
+        ["css=#numberGuess", "css:finder"],
+        ["xpath=//input[@id='numberGuess']", "xpath:attributes"],
+        ["xpath=//form[@id='numGuessForm']/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d74dfbc2-0c6d-4df0-a50e-5a7721ab1a6e",
+      "comment": "Ввести string",
+      "command": "type",
+      "target": "id=numberGuess",
+      "targets": [
+        ["id=numberGuess", "id"],
+        ["name=numberGuess", "name"],
+        ["css=#numberGuess", "css:finder"],
+        ["xpath=//input[@id='numberGuess']", "xpath:attributes"],
+        ["xpath=//form[@id='numGuessForm']/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "string"
+    }, {
+      "id": "080ac774-0220-4bf5-9a6e-71de9828074c",
+      "comment": "Нажать на кнопку Submit",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//form[@id='numGuessForm']/div[3]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3a167aa-04e9-4844-a3a9-863f3a2a29bf",
+      "comment": "проверить что появилось сообщение: string: Not a number!",
+      "command": "assertText",
+      "target": "css=b > i",
+      "targets": [
+        ["css=b > i", "css:finder"],
+        ["xpath=//label[@id='feedbackLabel']/font/b/i", "xpath:idRelative"],
+        ["xpath=//b/i", "xpath:position"],
+        ["xpath=//i[contains(.,'string: Not a number!')]", "xpath:innerText"]
+      ],
+      "value": "string: Not a number!"
+    }, {
+      "id": "725cf4a0-35d6-49ab-89f1-e52e946cd664",
+      "comment": "Закрытие сайта",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f0240dff-f9aa-49dd-b870-71479b259364",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b0548f8d-cbcb-4c2d-970e-7625e90af0d7"]
+  }],
+  "urls": ["https://testsheepnz.github.io/BasicCalculator.html", "https://testsheepnz.github.io/random-number.html"],
+  "plugins": []
+}
